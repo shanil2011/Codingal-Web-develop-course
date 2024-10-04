@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascripts object and properties</h2>
+
+    <p>tere are two different ways to access an object property</p>
+
+    <p>you can use .property or ["property"]</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var person = {
+            firstname: "I",
+            age: 20,
+        };
+
+        document.getElementById("demo").innerHTML = person.firstname+ " am " + person.age + " years old" ;
+    </script>
+
+    <h1>Javascript math with object</h1>
+
+    <script type="text/javascript">
+
+        var value = Math.abs(20);
+        document.write("Demo Test Value :" + value + "<br>");
+
+        var value = Math.acos(-1);
+        document.write("Demo1 Test Value :" + value + "<br>");
+
+        var value = Math.abs(1);
+        document.write("Demo2 Test Value :" + value + "<br>");
+
+        var value = Math.abs(.5);
+        document.write("Demo3 Test Value :" + value + "<br>");
+    </script>
+
+    <p>Finding the largest number with help of Arguments objects</p>
+
+    <p id="result"></p>
+
+    <script>
+        function findmax()
+        {
+        var i ;
+        var max = 0;
+        for(i = 0; i < arguments.length; i++)
+        {
+           if(arguments[i] > max)
+           {
+            max = arguments[i];
+           }
+        }
+        return max
+        }
+        document.getElementById("result").innerHTML = findMax(4,5,6);
+    </script>
+</body>
+</html>
