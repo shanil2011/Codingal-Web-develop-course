@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS array</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        var cars = ["Coding","Magic","Learn"];
+
+        document.getElementById("demo").innerHTML = cars[2];
+    </script>
+    <h2>JS array methods</h2>
+
+    <p id="myjoin"></p>
+    <p id="myfirstpop"></p>
+    <p id="mysecondpop"></p>
+
+    <script>
+        var fruits = ["Banana","Orange","Apple","Mango"]
+
+        document.getElementById("myjoin").innerHTML = fruits.join(" * ");
+
+        document.getElementById("myfirstpop").innerHTML = fruits;
+        fruits.pop();
+
+        document.getElementById("mysecondpop").innerHTML = fruits;
+    </script>
+
+    <h2>JS functions</h2>
+    <p>Do a calculation and display with result</p>
+    <p id="emo"></p>
+
+    <script>
+        function add(a,b){
+            return  a + b;
+        }
+        function average (a,b){
+            return add(a,b) / 2;
+        }
+        let result = average(10,20);
+        document.getElementById("emo").innerHTML = result;
+    </script>
+</body>
+</html>
