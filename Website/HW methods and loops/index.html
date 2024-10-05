@@ -18,6 +18,11 @@
         docment.write("<br>");
         docment.write(str.startsWith('B'));
         docment.write("<br>");
+
+        var str1 = "SHHH";
+        var patt = new RegExp("about");
+        var res  = patt.test(str);
+        document.write(res);
     </script>
 </body>
 </html>
