@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+h1{
+  text-align: center;
+}
+form {
+  max-width: 300px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+div {
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+button{
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+#message{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
