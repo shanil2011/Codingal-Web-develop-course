@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <tittle>Data types</tittle>
+    </head>
+
+    <body>
+        <h1>JS data types</h1>
+        <script>
+            var a = 8;
+            var b = 10;
+            var c = 10;
+            var d = null;
+            var e;
+            document.write("a and b are equal : " + (a==b));
+            document.write("<br>");
+            document.write("b and c are equal : " + (b==c));
+            document.write("<br>");
+            document.write("the value of d is : " + d);
+            document.write("<br>");
+            document.write("the value of e is : " + e);
+        </script>
+
+        <p>Click the button to get a time-based greetings</p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="hour"></p>
+        <p id="greet"></p>
+        <script>
+            function myFunction(){
+                var greeting;
+                var time = new Date().getHours();
+
+                if(time < 10){
+                    greeting = "good morning";
+                }
+
+                else if(time < 19){
+                    greeting = "good day";
+                }
+
+                else{
+                    greetings = "good evening";
+                }
+
+                document.getElementById("hour").innerHTML = "Current hour is:"
+                + time;
+                document.getElementById("greet").innerHTML = greeting;
+            }
+        </script>
+        <h2>JS using loop</h2>
+        <p id="number"></p>
+        <script>
+            var text = "";
+            var i = 0;
+            while(i < 10){
+                text +="<br>the number is :" + i;
+                i++;
+            }
+            document.getElementById("number").innerHTML = text;
+        </script>
+    </body>
+
+</html>
