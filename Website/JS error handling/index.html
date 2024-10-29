@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS error handling</h2>
+    <p>This example demonstrate how to use <b>catch</b> to display an error </p>
+    <p id="error message"></p>
+    <script>
+        try {
+            addalert("Welcome Guest!");
+        }
+        catch (err) {
+            document.getElementById("error message").innerHTML = "you did not define the function"; 
+        } 
+    </script>
+</body>
+</html>
