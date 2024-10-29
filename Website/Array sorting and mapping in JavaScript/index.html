@@ -21,5 +21,32 @@
             document.getElementById("result").innerHTML = points;
         }
     </script>
+    <p>Multiply every elements with the number 10:</p>
+    <p id="product value"></p>
+    <script>
+        var numbers = [28, 6, 19, 95];
+
+        function myFunction(num){
+            return num * 10;
+        }
+
+        var newarray = numbers.map(myFunction);
+        document.getElementById("product value").innerHTML = newarray;
+    </script>
+    <p>click the button to execute JavaScript expressions</p>
+    <button onclick="myFunction1()">Try it!</button>
+    <p id="result!"></p>
+    <script>
+        function myFunction1(){
+            var x = 10;
+            var y = 20;
+            var a = eval("x + y")+"<br>";
+            var b = eval("2 * 2")+"<br>";
+            var c = eval("y - x")+"<br>";
+
+            var res = a + b + c;
+            document.getElementById("result!").innerHTML = res;
+        }
+    </script>
 </body>
 </html>
