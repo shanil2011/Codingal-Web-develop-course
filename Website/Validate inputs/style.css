@@ -1,0 +1,33 @@
+<style>
+
+body{
+
+}
+
+.text1{
+    color: red;
+    text-decoration: overline;
+}
+
+.text2{
+    color: blue;
+    text-decoration: line-through;
+}
+
+.text3{
+    color: green; 
+    text-decoration: underline;
+}
+
+.text4{
+    color: yellow; 
+    text-decoration: underline overline;
+}
+.p1{
+    font-family: "Time new roman", 'Times New Roman', Times, serif;
+}
+.p2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
