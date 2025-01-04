@@ -1,0 +1,1 @@
+print("My name is Tahsin Shainl. I am a student of Milestone School and College. I am studying in class 7. I am 12 years old. I am a student of Sun section and my roll is 3rd.")
