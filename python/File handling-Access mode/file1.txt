@@ -1,0 +1,4 @@
+Student1 Name:Masha F.S:Chemistry
+Student2 Name:kujou F.S:Mathematics
+Student3 Name:Matilda F.S:Computer study
+Student4 Nmae:Amato F.S:Mathematics 
