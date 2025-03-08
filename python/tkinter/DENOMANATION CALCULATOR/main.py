@@ -123,7 +123,7 @@ def topwin():
     l7.place(x=180, y=380   )
     l8.place(x=180, y=410   )
     l9.place(x=180, y=440   )
-    l10.place(x=180, y=470  )
+    l10.place(x=180, y=470   )
 
 
     t1.place(x=270, y=200   )
@@ -135,7 +135,7 @@ def topwin():
     t7.place(x=270, y=380   )
     t8.place(x=270, y=410   )
     t9.place(x=270, y=440   )
-    t10.place(x=270, y=470  )
+    t10.place(x=270, y=470   )
 
 
     top.mainloop()
