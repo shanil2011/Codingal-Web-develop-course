@@ -67,8 +67,9 @@ while running:
         if sprite1.rect.colliderect(sprite2.rect) or sprite1.rect.colliderect(sprite3.rect):
             all_sprites.remove(sprite2)
             all_sprites.remove(sprite3)
+            all_sprites.add(sprite1)
             won = True
-
+#hello, this is a comment
     # Drawing
     screen.blit(background_image, (0, 0))
     all_sprites.draw(screen)
