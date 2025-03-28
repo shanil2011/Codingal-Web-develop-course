@@ -170,3 +170,4 @@ while running:
     show_score(textX, textY)
     pygame.display.update()
 
+
