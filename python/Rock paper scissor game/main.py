@@ -1,4 +1,9 @@
 import random
+from tkinter import *
+
+root = Tk()
+root.title("Rock Paper Scissors")
+root.geometry("300x200")
 
 options = ("rock", "paper", "scissors")
 running = True
@@ -29,3 +34,4 @@ while running:
         running = False
 
 print("Thanks for playing!")
+root.mainloop()

@@ -44,6 +44,7 @@ def topwin():
     l8 = Label(top, text="5", bg='light grey')
     l9 = Label(top, text="2", bg='light grey')
     l10 = Label(top, text="1", bg='light grey')
+    l11 = Label(top, text="coins", bg='light grey')
 
     t1 = Entry(top)
     t2 = Entry(top)
@@ -55,6 +56,7 @@ def topwin():
     t8 = Entry(top)
     t9 = Entry(top)
     t10 = Entry(top)
+    t11 = Entry(top)
 
     def calculator():
         try:
@@ -80,6 +82,9 @@ def topwin():
             amount %= 2
             note1 = amount // 1
             amount %= 1
+            coin100 = amount * 100
+            amount = 100
+
 
             t1.delete(0, END)
             t2.delete(0, END)
@@ -91,6 +96,7 @@ def topwin():
             t8.delete(0, END)
             t9.delete(0, END)
             t10.delete(0, END)
+            t11.delete(0, END)
 
             t1.insert(END, str(note1000))
             t2.insert(END, str(note500))
@@ -102,6 +108,7 @@ def topwin():
             t8.insert(END, str(note5))
             t9.insert(END, str(note2))
             t10.insert(END, str(note1))
+            t11.insert(END, str(coin100))
 
 
         except ValueError:
@@ -124,7 +131,7 @@ def topwin():
     l8.place(x=180, y=410   )
     l9.place(x=180, y=440   )
     l10.place(x=180, y=470  )
-
+    l11.place(x=180, y=500  )
 
     t1.place(x=270, y=200   )
     t2.place(x=270, y=230   )
@@ -136,6 +143,7 @@ def topwin():
     t8.place(x=270, y=410   )
     t9.place(x=270, y=440   )
     t10.place(x=270, y=470  )
+    t11.place(x=270, y=500  )
 
 
     top.mainloop()
