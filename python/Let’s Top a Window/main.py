@@ -17,3 +17,5 @@ btn = Button(root, text="Click here to open another Window", command=topwin)
 
 l.pack()
 btn.pack()
+
+root.mainloop()

@@ -9,11 +9,11 @@ window.resizable(width=False, height=False)
 def inches_to_cm():
 
 
-inches = ent_inches.get()
+    inches = ent_inches.get()
 
-cm = 2.54 * (float(inches))
+    cm = 2.54 * (float(inches))
 
-lbl_result["text"] = f"{cm}"
+    lbl_result["text"] = f"{cm}"
 
 frm_entry = tk.Frame(master=window)
 
