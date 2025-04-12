@@ -1,7 +1,7 @@
 import random
 from tkinter import *
 
-options = ("rock", "paper", "scissors")
+SIUU = entry("please enter your name: ")
 running = True
 
 while running:
