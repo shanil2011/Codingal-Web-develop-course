@@ -29,7 +29,7 @@ while running:
     if input() not in [num2]:
         print("Your password is weak!")
 
-    if input() == [num1(any) , num2(any) , num3(any)]:
+    if any(char in num1 for char in enter) and any(char in num2 for char in enter) and any(char in num3 for char in enter):
         print("Your password is strong!")
 
 if input() == "exit":
