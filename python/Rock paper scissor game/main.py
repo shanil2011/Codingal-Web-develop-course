@@ -30,4 +30,3 @@ while running:
         running = False
 
 print("Thanks for playing!")
-root.mainloop()
