@@ -1,33 +1,38 @@
-import random
+
 from tkinter import *
 
-SIUU = entry("please enter your name: ")
+enter = input("Enter something: ")
 running = True
+
+num1 = "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+num2 = 1, 2, 3, 4, 5, 6, 7, 8, 9, 0
+num3 = "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "?", "/", "|", "{", "}", "[", "]", ";", ":", "'", '"', "<", ">", ",", ".", "/", "?"
 
 while running:
 
-    player = None
-    computer = random.choice(options)
+    if len(input()) > 20:
+        print("Your password  is too long!")
+    
+    if len(input()) < 3:
+        print("Your password is too short!")
 
-    while player not in options:
-        player = input("Enter a choice (rock, paper, scissors): ")
+    if len(input()) == 0:
+        print("You didn't enter anything!")
 
-    print(f"Player: {player}")
-    print(f"Computer: {computer}")
+    if input() not in [num1]:
+        print("Your password is weak!")
 
-    if player == computer:
-        print("It's a tie!")
-    elif player == "rock" and computer == "scissors":
-        print("You win!")
-    elif player == "paper" and computer == "rock":
-        print("You win!")
-    elif player == "scissors" and computer == "paper":
-        print("You win!")
-    else:
-        print("You lose!")
+    if input() not in [num3]:
+        print("Your password is weak!")
 
-    if not input("Play again? (y/n): ").lower() == "y":
-        running = False
+    if input() not in [num2]:
+        print("Your password is weak!")
 
-print("Thanks for playing!")
-root.mainloop()
+    if input() == [num1(any) , num2(any) , num3(any)]:
+        print("Your password is strong!")
+
+    running = False
+
+if running == False:
+    print("Exiting...")
+    exit()
