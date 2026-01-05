@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leap Year Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Leap Year Checker</h2>
+
+        <form method="post">
+            <input type="number" name="year" placeholder="Enter year" required>
+            <button type="submit">Check</button>
+        </form>
+
+        {% if result %}
+            <p class="result">{{ result }}</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
