@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    <h1>Age Calculator</h1>
+    <form action="/calculate" method="POST">
+        <label for="birth_year">Enter your birth year:</label>
+        <input type="number" id="birth_year" name="birth_year" required><br>
+        <button type="submit">Calculate Age</button>
+    </form>
+    
+    {% if age is not none %}
+        <h2>Your age is: {{ age }}</h2>
+    {% endif %}
+    
+    {% if error is not none %}
+        <h2 style="color: red;">{{ error }}</h2>
+    {% endif %}
+</body>
+
+</html>
