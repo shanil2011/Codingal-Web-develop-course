@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #f0f8ff;
+}
+
+h1 {
+    color: #4CAF50;
+    font-size: 2em;
+}
+
+div {
+    margin: 10px 0;
+}
+
+/* Input and Button Styling */
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for Reset and Locate Me buttons */
+#locate-btn {
+    background-color: #007bff;
+}
+
+#locate-btn:hover {
+    background-color: #0056b3;
+}
+
+#reset-btn {
+    background-color: #ff5722;
+}
+
+#reset-btn:hover {
+    background-color: #e64a19;
+}
+
+#status {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+p {
+    font-size: 1em;
+    color: #333;
+}

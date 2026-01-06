@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locate Me</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1>Locate Me</h1>
+
+    <!-- Search Bar -->
+    <div>
+        <input type="text" id="location-input" placeholder="Enter a location (e.g., New York)" />
+        <button id="search-btn">Search Location</button>
+    </div>
+    <p id="status"></p>
+
+    <!-- Locate Me Button -->
+    <div>
+        <button id="locate-btn">Locate Me</button>
+        <button id="reset-btn">Reset Map</button>
+    </div>
+
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <script>
+        // Initialize the map
+        const map = L.map("map").setView([0, 0], 2); // Default view (worldwide)
+
+        // Add OpenStreetMap tiles
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Event listener for the search button
+        document.getElementById("search-btn").addEventListener("click", () => {
+            const location = document.getElementById("location-input").value.trim();
+            const status = document.getElementById("status");
+
+            if (!location) {
+                status.textContent = "Please enter a location.";
+                return;
+            }
+
+            status.textContent = "Searching...";
+
+            // Fetch geocoded data
+            fetch("/geocode", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ location })
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.error) {
+                        status.textContent = data.error;
+                        return;
+                    }
+
+                    const { latitude, longitude, display_name } = data;
+
+                    // Center map on the searched location
+                    map.setView([latitude, longitude], 15);
+
+                    // Add marker at the location
+                    L.marker([latitude, longitude])
+                        .addTo(map)
+                        .bindPopup(`<b>${display_name}</b>`)
+                        .openPopup();
+
+                    status.textContent = `Location found: ${display_name}`;
+                })
+                .catch((error) => {
+                    console.error("Error fetching location:", error);
+                    status.textContent = "An error occurred while fetching the location.";
+                });
+        });
+
+        // Event listener for the "Locate Me" button (Geolocation API)
+        document.getElementById("locate-btn").addEventListener("click", () => {
+            const status = document.getElementById("status");
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const { latitude, longitude } = position.coords;
+
+                        // Center map on the user's location
+                        map.setView([latitude, longitude], 15);
+
+                        // Add marker at the user's location
+                        L.marker([latitude, longitude])
+                            .addTo(map)
+                            .bindPopup(`<b>You are here</b>`)
+                            .openPopup();
+
+                        status.textContent = "Your location is detected.";
+                    },
+                    (error) => {
+                        console.error("Error getting location:", error);
+                        status.textContent = "Unable to retrieve your location.";
+                    }
+                );
+            } else {
+                status.textContent = "Geolocation is not supported by your browser.";
+            }
+        });
+
+        // Event listener for the reset button
+        document.getElementById("reset-btn").addEventListener("click", () => {
+            map.setView([0, 0], 2); // Reset map to default view
+            document.getElementById("status").textContent = ""; // Clear status message
+            document.getElementById("location-input").value = ""; // Clear the search input field
+        });
+    </script>
+</body>
+</html>
