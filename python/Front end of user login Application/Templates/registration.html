@@ -1,1 +1,34 @@
-<
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="/static/styles.css">
+    </head>
+    <body>
+        <div align="center">
+            <div align="center", class ="Border">
+                <div class ="Header">
+                    <h1 class= "word">Register right now</h1>
+                </div>
+                <h2 class="word">
+                    <form action= "/registration" method="post">
+                        <input id="Username", name="Username", type="text", placeholder="Enter your Username", class="textbox">
+                        <br><br>
+                        <input id="E-mail", name="E-mail", type="email", placeholder="Enter your E-mail", class="textbox">
+                        <br><br>
+                        <input id="Password", name="Password", type="password", placeholder="Enter your Password", class="textbox">
+                        <br><br>
+                        <input id="Confirm Password", name="Confirm Password", type="password", placeholder="Confirm your Password", class="textbox">
+                        <br><br>
+                        <input type="submit", value="Register", class="btn">
+                        <br><br>
+                        <div class="msg">{{msg}}</div>
+                    </form>
+                </h2>
+                <h3>By registering , you can access all features of our website and do whatever you want.</h3>
+            </div>
+        </div>
+    </body> 
+</html> 
