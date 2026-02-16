@@ -1,59 +1,89 @@
-class Hillstation{
-    void location(){
-        System.out.println("Location is :");
-    }
-    void famousfor(){
-        System.out.println("Famous for :");
-    }
+class HillStation {
+
+void location() {
+
+System.out.println("Location is:");
+
 }
 
-class Manali extends Hillstation{
-    void location(){
-        System.out.println("Manai is in Himachol pradesh in India.");
-    }
-    void famousfor(){
-        System.out.println("It is famous for adventure sports.");
-    }
+void famousFor() {
+
+System.out.println("Famous for:");
+
 }
 
-class Mussorie extends Hillstation{
-    void location(){
-        System.out.println("Mussorie is in Uttarkhand.");
-    }
-    void famousfor(){
-        System.out.println("It is famous for eduacation instituition.");
-    }
 }
 
-class Gulmarg extends Hillstation{
-    void location(){
-        System.out.println("Gulmarg is in J and k.");
-    }
-    void famousfor(){
-        System.out.println("It is famous for skiing.");
-    }
+class Manali extends HillStation {
+
+void location() {
+
+System.out.println("Manali is in Himachal Pradesh, India.");
+
 }
 
-class Main{
-    public static void main(String args[]){
-        Hillstation A = new Hillstation();
+void famousFor() {
 
-        Hillstation M = new Hillstation();
+System.out.println("It is famous for adventure sports.");
 
-        Hillstation Mu = new Hillstation();
+}
 
-        Hillstation G = new Hillstation();
+}
 
-        A.location();
-        A.famousfor();
+class Mussoorie extends HillStation {
 
-        M.location();
-        M.famousfor();
+void location() {
 
-        Mu.location();
-        Mu.location();
+System.out.println("Mussoorie is in Uttarakhand.");
 
-        G.location();
-        G.famousfor();
-    }
+}
+
+void famousFor() {
+
+System.out.println("It is famous for educational institutions.");
+
+}
+
+}
+
+class Gulmarg extends HillStation {
+
+void location() {
+
+System.out.println("Gulmarg is in Jammu and Kashmir.");
+
+}
+
+void famousFor() {
+
+System.out.println("It is famous for skiing.");
+
+}
+
+}
+
+class Main {
+
+public static void main(String args[]) {
+
+HillStation M = new Manali();
+
+HillStation Mu = new Mussoorie();
+
+HillStation G = new Gulmarg();
+
+M.location();
+
+M.famousFor();
+
+Mu.location();
+
+Mu.famousFor();
+
+G.location();
+
+G.famousFor();
+
+}
+
 }
