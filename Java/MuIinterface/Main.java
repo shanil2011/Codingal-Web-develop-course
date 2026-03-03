@@ -12,6 +12,6 @@ class Main implements MyInterface{
     public static void main(String arg[]) {
         MyInterface obj = new Main();
         obj.method1();
-        obj.method2()
+        obj.method2();
     }
 }
